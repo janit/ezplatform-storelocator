@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <style>
+        .leaflet-popup-content p {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 100vw; height: 100vh" id="map"></div>
+<script type="text/javascript">
+
+    initMap();
+
+    async function initMap(){
+
+        const map = new L.Map('map', {
+            center: new L.LatLng(52.6313102,1.292898),
+            zoom: 14,
+            maxZoom: 18
+        });
+        const osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+        map.addLayer(osm);
+
+        let response = await fetch('/geojson/stores');
+        let geojsonFeatureCollection = await response.json();
+
+        function onEachFeature(feature, layer) {
+            if (feature.properties && feature.properties.popupContent) {
+                layer.bindPopup(feature.properties.popupContent);
+            }
+        }
+
+        L.geoJSON(geojsonFeatureCollection, {
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+    }
+</script>
+</body>
+</html>

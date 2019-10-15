@@ -1,0 +1,201 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: store
+    name:
+        eng-GB: Store
+    description: {  }
+    name_pattern: '<title>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: location
+            type: ezgmaplocation
+            name:
+                eng-GB: Location
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: telephone
+            type: ezstring
+            name:
+                eng-GB: Telephone
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Bowthorpe"
+        location:
+            latitude: 1.2173105
+            longitude: 52.6372672
+            address: '53 Roker Terrace, LANGTON LONG BLANDFORD, DT11 8BU'
+        telephone: '070 8132 5179'
+
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Crown Point"
+        location:
+            latitude: 52.6128844
+            longitude: 1.3074276
+            address: "45 Nith Street, GLASSHOUSES, HG3 3XD"
+        telephone: "070 3442 7551"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Eaton"
+        location:
+            latitude: 52.6082309
+            longitude: 1.2513629
+            address: "71 Holgate Rd, RADWAY, CV35 6BA"
+        telephone: "077 8461 5493"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Friars Quay"
+        location:
+            latitude: 52.6331542
+            longitude: 1.2945938
+            address: "94 Asfordby Rd, AIRNTULLY, PH1 6WJ"
+        telephone: "077 6992 0043"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Golden Triangle"
+        location:
+            latitude: 52.6302527
+            longitude: 1.2713031
+            address: "84 Jesmond Rd, KILDARY, IV18 1BD"
+        telephone: "070 7000 4401"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Heartsease Estate"
+        location:
+            latitude: 52.636899
+            longitude: 1.3275457
+            address: "61 Helland Bridge, UPPER ARLEY, DY12 1RS"
+        telephone: "079 3389 5053"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Mousehold Heath"
+        location:
+            latitude: 52.6454743
+            longitude: 1.3230579
+            address: "75 Stone Cellar Road, KINGSWOOD COMMON, HR5 6EP"
+        telephone: "070 2896 5939"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Norwich Lanes"
+        location:
+            latitude: 52.6297209
+            longitude: 1.2934871
+            address: "68 Northgate Street, BICKNACRE, CM3 1QU"
+        telephone: "079 5590 9599"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Norwich Over the Water"
+        location:
+            latitude: 52.6523529
+            longitude: 1.3506878
+            address: "117 Park End St, BRODSWORTH, DN5 3WY"
+        telephone: "079 7176 8235"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Riverside"
+        location:
+            latitude: 52.6241944
+            longitude: 1.3075673
+            address: "83 Thames Street, BOLBERRY, TQ7 4ZQ"
+        telephone: "079 2238 0825"
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: 2
+    attributes:
+        title: "Adam's Apple Thorpe Hamlet"
+        location:
+            latitude: 52.6280232
+            longitude: 1.3129529
+            address: "50 Wood Lane, MONACHTY, SY23 2ZW"
+        telephone: "077 7895 5460"
